@@ -25,9 +25,8 @@
     
     var table = new Tabulator("#example-table", {
         columns:[
-            {title:"YouTube", field:"Video", formatter:"link", formatterParams:{urlPrefix:"https://youtu.be/"} },
+            {title:"Title", field:"Video", formatter:"link", formatterParams:{labelField:"Title", urlPrefix:"https://youtu.be/"} },
             {title:"Video ID", field:"Video"},
-            {title:"Title", field:"Title"},
             {title:"Date Published", field:"Date"},
             {title:"Tags", field:"Tags"},
         ],
