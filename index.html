@@ -30,7 +30,10 @@
         ],
     });
 
-    
+    $.getJSON("assets/videos.json", function(json) {
+       console.log(json); // this will show the info it in firebug console
+        table.setData(json);
+    });
     
     $.ajax({
         url: "https://lefticus.github.io/cpp_weekly_videos/assets/videos.json",
