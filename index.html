@@ -6,7 +6,7 @@
 <link href="https://unpkg.com/tabulator-tables@4.7.2/dist/css/tabulator.min.css" rel="stylesheet">
 <script src="https://unpkg.com/tabulator-tables@4.7.2/dist/js/tabulator.min.js"></script>
 
-
+<script id="videoData" type="application/json" src="https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json"></script> 
     
     </head>
 <body>
@@ -21,7 +21,8 @@ var tableData = [
 ]
 
 var table = new Tabulator("#example-table", {
-    ajaxURL:"https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json",
+    //ajaxURL:"https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json",
+    data:videoData,
     columns:[
         {title:"Video ID", field:"Video"},
         {title:"Title", field:"Title"},
