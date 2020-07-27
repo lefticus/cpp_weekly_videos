@@ -21,7 +21,14 @@
             {title:"Date Published", field:"Date"},
         ],
     });
-                
+       
+    $(document).ready(function() {
+        var url =  "https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json";
+        $.getJSON(url + "?callback=?", null, function(data) {
+            table.setData(data);
+        });
+    });
+    /*
     $.ajax({
         url: "https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json",
      
@@ -43,6 +50,7 @@
             table.setData( response );
         }
     });
+    */
 </script>
 
 </html>
