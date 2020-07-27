@@ -3,35 +3,48 @@
 
 <head>
     <title>Video Database For C++ Weekly</title>
-<link href="https://unpkg.com/tabulator-tables@4.7.2/dist/css/tabulator.min.css" rel="stylesheet">
-<script src="https://unpkg.com/tabulator-tables@4.7.2/dist/js/tabulator.min.js"></script>
+    <link href="https://unpkg.com/tabulator-tables@4.7.2/dist/css/tabulator.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/tabulator-tables@4.7.2/dist/js/tabulator.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script id="videoData" type="application/json" src="https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json"></script>
 
-<script id="videoData" type="application/json" src="https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json"></script> 
-    
-    </head>
+</head>
+
 <body>
-   <div id="example-table"></div>
-    </body>
-    
-    
-        <script>
-var tableData = [
-    {id:1, name:"Billy Bob", age:"12", gender:"male", height:1, col:"red", dob:"", cheese:1},
-    {id:2, name:"Mary May", age:"1", gender:"female", height:2, col:"blue", dob:"14/05/1982", cheese:true},
-]
+    <div id="example-table"></div>
+</body>
 
-//var stuff = JSON.parse(document.getElementById('videoData').innerHTML);
-            
-var table = new Tabulator("#example-table", {
-    ajaxURL:"https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json?callback=nothing",
-    
-    //data:stuff,
-    columns:[
-        {title:"Video ID", field:"Video"},
-        {title:"Title", field:"Title"},
-        {title:"Date Published", field:"Date"},
-    ],
-});
-    </script>
+<script>
+                
+    var table = new Tabulator("#example-table", {
+        columns:[
+            {title:"Video ID", field:"Video"},
+            {title:"Title", field:"Title"},
+            {title:"Date Published", field:"Date"},
+        ],
+    });
+                
+    $.ajax({
+        url: "https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json",
+     
+        // The name of the callback parameter, as specified by the YQL service
+        jsonp: "callback",
+     
+        // Tell jQuery we're expecting JSONP
+        dataType: "jsonp",
+     
+        // Tell YQL what we want and that we want JSON
+    //    data: {
+    //        q: "select title,abstract,url from search.news where query=\"cat\"",
+    //        format: "json"
+    //    },
+     
+        // Work with the response
+        success: function( response ) {
+            console.log( response ); // server response
+            table.setData( response );
+        }
+    });
+</script>
 
 </html>
