@@ -23,7 +23,7 @@
     });
        
     $(document).ready(function() {
-        var url =  "https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json";
+        var url =  "https://lefticus.github.io/cpp_weekly_videos/assets/videos.json";
         $.getJSON(url + "?callback=?", null, function(data) {
             table.setData(data);
         });
