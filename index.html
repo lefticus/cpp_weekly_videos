@@ -20,12 +20,12 @@ var tableData = [
     {id:2, name:"Mary May", age:"1", gender:"female", height:2, col:"blue", dob:"14/05/1982", cheese:true},
 ]
 
-var stuff = JSON.parse(document.getElementById('videoData').innerHTML);
+//var stuff = JSON.parse(document.getElementById('videoData').innerHTML);
             
 var table = new Tabulator("#example-table", {
-    //ajaxURL:"https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json",
+    ajaxURL:"https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json?callback=nothing",
     
-    data:stuff,
+    //data:stuff,
     columns:[
         {title:"Video ID", field:"Video"},
         {title:"Title", field:"Title"},
