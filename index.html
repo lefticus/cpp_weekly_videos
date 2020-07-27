@@ -21,15 +21,11 @@ var tableData = [
 ]
 
 var table = new Tabulator("#example-table", {
-    data:tableData, //set initial table data
+    ajaxURL:"https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json",
     columns:[
-        {title:"Name", field:"name"},
-        {title:"Age", field:"age"},
-        {title:"Gender", field:"gender"},
-        {title:"Height", field:"height"},
-        {title:"Favourite Color", field:"col"},
-        {title:"Date Of Birth", field:"dob"},
-        {title:"Cheese Preference", field:"cheese"},
+        {title:"Video ID", field:"Video"},
+        {title:"Title", field:"Title"},
+        {title:"Date Published", field:"Date"},
     ],
 });
     </script>
