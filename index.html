@@ -21,16 +21,18 @@
             {title:"Date Published", field:"Date"},
         ],
     });
-       
+       /*
     $(document).ready(function() {
         var url =  "https://lefticus.github.io/cpp_weekly_videos/assets/videos.json";
         $.getJSON(url + "?callback=?", null, function(data) {
             table.setData(data);
         });
     });
-    /*
+    */
+    
+    
     $.ajax({
-        url: "https://raw.githubusercontent.com/lefticus/cpp_weekly/master/videos.json",
+        url: "https://lefticus.github.io/cpp_weekly_videos/assets/videos.json",
      
         // The name of the callback parameter, as specified by the YQL service
         jsonp: "callback",
@@ -50,7 +52,7 @@
             table.setData( response );
         }
     });
-    */
+   
 </script>
 
 </html>
