@@ -13,7 +13,11 @@
     "Video": "B3WWsKFePiM",
     "Title": "C++ Weekly - Ep 2 Cost of Using Statics",
     "Date": "2016-03-14",
-    "Tags": ["static", "C++11", "performance"]
+    "Tags": ["static", "C++11", "performance"],
+    "CompilerExplorer": [],
+    "QuickBench": [],
+    "GitHub": [],
+    "LinksToStandard": [],
   },
   {
     "Video": "OchPaGEH4TE",
