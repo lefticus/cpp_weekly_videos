@@ -162,7 +162,10 @@
   {
     "Video": "vZLc7BXSLXE",
     "Title": "[Re-upload] C++ Weekly - Ep 28 - C++17's [[fallthrough]] Attribute",
-    "Date": "2016-09-12"
+    "Date": "2016-09-12",
+    "CompilerExplorer": ["https://godbolt.org/z/qn1qMv"],
+    "Documentation": ["http://eel.is/c++draft/dcl.attr.fallthrough", "http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0188r1.pdf", "https://en.cppreference.com/w/cpp/language/attributes/fallthrough"]
+    
   },
   {
     "Video": "WSPmNL9834U",
